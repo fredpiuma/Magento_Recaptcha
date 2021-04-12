@@ -1,53 +1,48 @@
 # ReCaptcha
 
-*This module is no longer actively supported by StudioForty9.*
+## Recursos
 
-[![Build Status](https://travis-ci.org/StudioForty9/Recaptcha.svg?branch=master)](https://travis-ci.org/StudioForty9/Recaptcha)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/StudioForty9/Recaptcha/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/StudioForty9/Recaptcha/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/StudioForty9/Recaptcha/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/StudioForty9/Recaptcha/?branch=master)
-[![Downloads](https://img.shields.io/github/downloads/StudioForty9/Recaptcha/total.svg)](https://img.shields.io/github/downloads/StudioForty9/Recaptcha/total.svg)
+O módulo usa o [Google reCAPTCHA V2](https://www.google.com/recaptcha/intro/index.html) para evitar spam na sua loja Magento, atualmente são suportados os seguintes formulários:
 
-## Features
+- Contato
+- Análise do produto
+- Criar conta
+- Enviar o produto para um amigo
+- Login
+- Recuperar senha
 
-The reCAPTCHA extension uses Google's reCAPTCHA widget [(read more)](https://www.google.com/recaptcha/intro/index.html) to lower the friction when identifying real people and provide powerful protection against spam with front-end forms in Magento, we currently support the following forms:
+## Instalação
 
-- Contact page form
-- Product Review form
-- Customer Registration form
-- Product Send to friend form
-- Login Form
-- Forgot Password Form
+Extraia os arquivos na raiz da loja
 
-## Composer Installation
+## Desinstalação
 
-Add the package to your require list:
+### Arquivos
+rm -rf ./app/code/community/Studioforty9
+rm -rf ./app/design/frontend/base/default/layout/studioforty9_recaptcha.xml
+rm -rf ./app/design/frontend/base/default/template/studioforty9
+rm -rf ./app/etc/modules/Studioforty9_Recaptcha.xml
+rm -rf ./app/locale/en_US/Studioforty9_Recaptcha.csv
+rm -rf ./app/locale/pt_BR/Studioforty9_Recaptcha.csv
 
-```json
-"require": {
-    "studioforty9/recaptcha": "dev-master"
-}
-```
+### Banco de Dados
+DELETE FROM core_config_data WHERE path LIKE 'google/recaptcha/%';
+DELETE FROM core_resource WHERE code = 'studioforty9_recaptcha_setup';
 
-Add the repository to your project composer.json file:
+## Documentação
 
-```json
-"repositories": [
-    {"type": "composer", "url": "http://packages.firegento.com"}
-],
-```
+http://recaptcha.readme.io/docs/
 
-## Documentation
+## Extendendo o módulo para utilizar com seus formulários
 
-Documentation can be found at http://recaptcha.readme.io/docs/
+https://recaptcha.readme.io/v1.5/docs/developers
 
-## Extending/Using with your own forms
+## Contribua
 
-Please refer to the developer documentation at https://recaptcha.readme.io/v1.5/docs/developers
+[Contribua comigo](https://github.com/studioforty9/recaptcha/blob/master/CONTRIBUTING.md)
 
-## Contributing
+Contribua com o autor original(https://github.com/studioforty9/recaptcha/blob/master/CONTRIBUTING.md)
 
-[see CONTRIBUTING file](https://github.com/studioforty9/recaptcha/blob/master/CONTRIBUTING.md)
+## Licença
 
-## Licence
-
-BSD 3 Clause [see LICENCE file](https://github.com/studioforty9/recaptcha/blob/master/LICENCE)
+BSD 3 Clause [Ver licença](https://github.com/fredpiuma/magento_recaptcha/blob/master/LICENCE)
