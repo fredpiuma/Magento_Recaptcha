@@ -18,16 +18,20 @@ Extraia os arquivos na raiz da loja
 ## Desinstalação
 
 ### Arquivos
+```bash
 rm -rf ./app/code/community/Studioforty9
 rm -rf ./app/design/frontend/base/default/layout/studioforty9_recaptcha.xml
 rm -rf ./app/design/frontend/base/default/template/studioforty9
 rm -rf ./app/etc/modules/Studioforty9_Recaptcha.xml
 rm -rf ./app/locale/en_US/Studioforty9_Recaptcha.csv
 rm -rf ./app/locale/pt_BR/Studioforty9_Recaptcha.csv
+```
 
 ### Banco de Dados
+```sql
 DELETE FROM core_config_data WHERE path LIKE 'google/recaptcha/%';
 DELETE FROM core_resource WHERE code = 'studioforty9_recaptcha_setup';
+```
 
 ## Documentação
 
