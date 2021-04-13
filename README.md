@@ -45,7 +45,7 @@ https://recaptcha.readme.io/v1.5/docs/developers
 
 [Contribua comigo](https://github.com/studioforty9/recaptcha/blob/master/CONTRIBUTING.md)
 
-[Contribua com o autor original] (https://github.com/studioforty9/recaptcha/blob/master/CONTRIBUTING.md)
+[Contribua com o autor original](https://github.com/studioforty9/recaptcha/blob/master/CONTRIBUTING.md)
 
 ## Licença
 
